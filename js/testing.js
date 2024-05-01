@@ -3,6 +3,21 @@
 
 const theContainer = document.querySelector('.container');
 
+const testingDiv = document.querySelector('#testingDiv');
+
+Element.prototype.sayHi = function () {
+  alert(`Hello, I'm ${this.tagName}`);
+};
+
+document.documentElement.sayHi(); // Hello, I'm HTML
+document.body.sayHi(); // Hello, I'm BODY
+
+alert(document.body.myData.title); // Imperator
+testingDiv.innerHTML = testingDiv.nodeName;
+testingDiv.innerHTML += ' • ';
+testingDiv.innerHTML += testingDiv.id;
+
+// setInterval(() => (testingDiv.hidden = !testingDiv.hidden), 1000);
 const colorArray = [
   `AliceBlue`,
   `AntiqueWhite`,
